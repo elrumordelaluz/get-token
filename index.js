@@ -1,9 +1,20 @@
-'use strict';
+'use strict'
 
-module.exports = (input, {postfix = 'rainbows'} = {}) => {
-	if (typeof input !== 'string') {
-		throw new TypeError(`Expected a string, got ${typeof input}`);
-	}
+module.exports = function ({headers, query, cookies}) {
+  if (
+    headers.authorization &&
+		headers.authorization.split(' ')[0] === 'Bearer'
+  ) {
+    return headers.authorization.split(' ')[1]
+  }
 
-	return `${input} & ${postfix}`;
-};
+  if (query && query.token) {
+    return query.token
+  }
+
+  if (cookies && cookies.token) {
+    return cookies.token
+  }
+
+  return null
+}

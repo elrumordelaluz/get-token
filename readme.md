@@ -1,71 +1,30 @@
-# node-module-boilerplate
+# get-token
 
-> Boilerplate to kickstart creating a Node.js module
-
-This is what I use for [my own modules](https://www.npmjs.com/~sindresorhus).
-
-Also check out [`node-cli-boilerplate`](https://github.com/sindresorhus/node-cli-boilerplate).
-
-
-## Getting started
-
-**Click the "Use this template" button.**
-
-Alternatively, create a new directory and then run:
-
-```
-$ curl -fsSL https://github.com/sindresorhus/node-module-boilerplate/archive/master.tar.gz | tar -xz --strip-components=1
-```
-
-There's also a [Yeoman generator](https://github.com/sindresorhus/generator-nm).
-
-
----
-
-**Remove everything from here and above**
-
----
-
-
-# unicorn-fun [![Build Status](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun.svg?branch=master)](https://travis-ci.com/YOUR-GITHUB-USERNAME/unicorn-fun)
-
-> My awesome module
-
+> Get token from Request
 
 ## Install
 
 ```
-$ npm install unicorn-fun
+$ yarn add get-token
 ```
-
 
 ## Usage
 
 ```js
-const unicornFun = require('unicorn-fun');
+const getToken = require('get-token')
 
-unicornFun('unicorns');
-//=> 'unicorns & rainbows'
+app.post((req, res, next) => {
+  req.token = getToken(req)
+  next()
+}, …)
 ```
-
 
 ## API
 
-### unicornFun(input, options?)
+### getToken(req)
 
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
+#### req
 
 Type: `object`
 
-##### postfix
-
-Type: `string`<br>
-Default: `rainbows`
-
-Lorem ipsum.
+Request Object

@@ -1,13 +1,6 @@
-import test from 'ava';
-import unicornFun from '.';
+import test from 'ava'
+import getToken from '.'
 
-test('main', t => {
-	t.throws(() => {
-		unicornFun(123);
-	}, {
-		instanceOf: TypeError,
-		message: 'Expected a string, got number'
-	});
-
-	t.is(unicornFun('unicorns'), 'unicorns & rainbows');
-});
+test('query', t => {
+  t.is(getToken({headers: {}, query: {token: 'hola'}}), 'hola')
+})

@@ -1,27 +1,32 @@
 {
-	"name": "unicorn-fun",
+	"name": "get-token",
 	"version": "0.0.0",
-	"description": "My awesome module",
+	"description": "Get token from Request",
 	"license": "MIT",
-	"repository": "YOUR-GITHUB-USERNAME/unicorn-fun",
+	"repository": "elrumordelaluz/get-token",
 	"author": {
-		"name": "YOUR NAME",
-		"email": "YOUR EMAIL",
-		"url": "YOUR WEBSITE"
+		"name": "Lionel Tzatzkin",
+		"email": "elrumordelaluz@hotmail.com",
+		"url": "https://elrumordelaluz.com"
 	},
 	"engines": {
 		"node": ">=8"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"test": "xo && ava",
+		"fixes": "xo --fix"
 	},
 	"files": [
 		"index.js"
 	],
 	"keywords": [
-		"unicorn",
-		"fun"
+		"token",
+		"express"
 	],
+	"xo": {
+		"space": true,
+		"semicolon": false
+	},
 	"dependencies": {},
 	"devDependencies": {
 		"ava": "^2.1.0",
