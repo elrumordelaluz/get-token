@@ -1,6 +1,6 @@
 {
 	"name": "get-token",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Get token from Request",
 	"license": "MIT",
 	"repository": "elrumordelaluz/get-token",
