@@ -1,5 +1,5 @@
 {
-	"name": "get-token",
+	"name": "getoken",
 	"version": "0.1.0",
 	"description": "Get token from Request",
 	"license": "MIT",
